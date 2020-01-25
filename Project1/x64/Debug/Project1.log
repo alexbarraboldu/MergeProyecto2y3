@@ -1,0 +1,11 @@
+﻿  GameLoop.cpp
+C:\Users\alexb\source\repos\Project1_2\Project1\Project1\GameLoop.cpp(18,40): warning C4267: 'inicializando': conversión de 'size_t' a 'short'; posible pérdida de datos
+C:\Users\alexb\source\repos\Project1_2\Project1\Project1\GameLoop.cpp(363,97): warning C4244: '=': conversión de '_Rep' a 'clock_t'; posible pérdida de datos
+          with
+          [
+              _Rep=__int64
+          ]
+C:\Users\alexb\source\repos\Project1_2\Project1\Project1\GameLoop.cpp(379,12): warning C4244: '=': conversión de 'float' a 'clock_t'; posible pérdida de datos
+C:\Users\alexb\source\repos\Project1_2\Project1\Project1\GameLoop.cpp(387,27): warning C4244: '+=': conversión de 'float' a 'clock_t'; posible pérdida de datos
+C:\Users\alexb\source\repos\Project1_2\Project1\Project1\GameLoop.cpp(389,12): warning C4244: '=': conversión de 'float' a 'clock_t'; posible pérdida de datos
+  Project1.vcxproj -> C:\Users\alexb\source\repos\Project1_2\Project1\x64\Debug\Project1.exe
