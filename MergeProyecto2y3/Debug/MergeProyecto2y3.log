@@ -1,0 +1,52 @@
+﻿  FunctionsSource.cpp
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(15,32): warning C4267: 'inicializando': conversión de 'size_t' a 'short'; posible pérdida de datos
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(16,23): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(202,17): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(283,18): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(366,15): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(370,26): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(445,25): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(492,24): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(511,26): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(576,25): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(592,31): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(625,24): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(641,26): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\FunctionsSource.cpp(650,31): warning C4018: '<': no coinciden signed/unsigned
+  GamePlay.cpp
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\GamePlay.cpp(38,23): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\GamePlay.cpp(43,23): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\GamePlay.cpp(68,23): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\GamePlay.cpp(71,24): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\GamePlay.cpp(83,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\GamePlay.cpp(146,40): warning C4267: 'inicializando': conversión de 'size_t' a 'short'; posible pérdida de datos
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\GamePlay.cpp(147,23): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\GamePlay.cpp(159,23): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\GamePlay.cpp(161,24): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\GamePlay.cpp(535,97): warning C4244: '=': conversión de '_Rep' a 'clock_t'; posible pérdida de datos
+          with
+          [
+              _Rep=__int64
+          ]
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\GamePlay.cpp(555,12): warning C4244: '=': conversión de 'float' a 'clock_t'; posible pérdida de datos
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\GamePlay.cpp(563,27): warning C4244: '+=': conversión de 'float' a 'clock_t'; posible pérdida de datos
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\GamePlay.cpp(565,12): warning C4244: '=': conversión de 'float' a 'clock_t'; posible pérdida de datos
+  Source.cpp
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\Source.cpp(34,4): warning C4809: la instrucción switch tiene una etiqueta 'default' redundante; se proporcionan todas las etiquetas 'case' posibles
+  load-save.cpp
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\load-save.cpp(15,23): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\load-save.cpp(22,24): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\load-save.cpp(34,24): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\load-save.cpp(44,24): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\load-save.cpp(51,27): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\load-save.cpp(62,25): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\load-save.cpp(82,23): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\load-save.cpp(88,24): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\load-save.cpp(96,24): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\load-save.cpp(104,24): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\load-save.cpp(110,27): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\alexb\source\repos\MergeProyecto2y3\MergeProyecto2y3\load-save.cpp(119,25): warning C4018: '<': no coinciden signed/unsigned
+  Generando código...
+  LINK : no se encontr¾ C:\Users\alexb\source\repos\MergeProyecto2y3\Debug\MergeProyecto2y3.exe o no lo gener¾ el ·ltimo vÝnculo incremental; ejecutando vÝnculo completo
+Source.obj : error LNK2005: ya se defini¾ "class std::vector<struct User,class std::allocator<struct User> > users" (?users@@3V?$vector@UUser@@V?$allocator@UUser@@@std@@@std@@A) en GamePlay.obj
+C:\Users\alexb\source\repos\MergeProyecto2y3\Debug\MergeProyecto2y3.exe : fatal error LNK1169: se encontraron uno o mßs sÝmbolos definidos simultßneamente
