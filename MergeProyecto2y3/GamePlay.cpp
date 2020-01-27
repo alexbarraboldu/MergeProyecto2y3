@@ -362,27 +362,6 @@ room* checkDoors(room* _room)
 #include <fstream>
 #include <sstream>
 
-void loadGameState()
-{
-
-}
-
-void saveGameState()
-{
-	std::fstream file;
-	file.open("dungeon.txt", std::ios::out);
-	std::string line;
-	while (file.eof())
-	{
-		std::getline(std::cin, line);
-		int lineSize = line.size();
-		for (size_t i = 0; i < lineSize; i++)
-		{
-
-		}
-	}
-}
-
 void menuPause()
 {
 	bool menuLoop = true;
@@ -410,6 +389,8 @@ void menuPause()
 	}
 }
 
+bool frameRateLoop;
+
 void FrameRate(room*& _room, int& _playerhp, int _listRoomLength)
 {
 	int inputCount = 0;
@@ -420,7 +401,6 @@ void FrameRate(room*& _room, int& _playerhp, int _listRoomLength)
 	clock_t deltaTime;
 	unsigned int frames = 0;
 	double frameRate = 120;
-
 	frameRateLoop = true;
 	while (frameRateLoop) {
 
@@ -551,14 +531,14 @@ void FrameRate(room*& _room, int& _playerhp, int _listRoomLength)
 		//
 		// SOME INFORMATION FOR TRUBLESHOOTING
 		//
-		/*std::cout << "\nDelta Time: " << deltaTime / 1000.0f;
+		std::cout << "\nDelta Time: " << deltaTime / 1000.0f;
 		std::cout << "\nTiempo: " << time / 1000.0f;
 		std::cout << "\nX: " << _room->player.pos.X << " Y: " << _room->player.pos.Y;
 		std::cout << "\nRoom Size: " << _room->size;
 		std::cout << "\nEnemy List Length: " << _room->enemyList.size();
 		std::cout << "\nRoom List Length: " << _listRoomLength;
 		std::cout << "\nPuerta WEST: " << _room->west << " | Puerta EAST: " << _room->east << "\nPuerta NORTH: " << _room->north << " | Puerta SOUTH: " << _room->south;
-		std::cout << "\nVidas: " << _playerhp << std::endl;*/
+		std::cout << "\nVidas: " << _playerhp << std::endl;
 
 		//if you really want FPS
 		if (timer >= 1000.0) { //every second
@@ -581,9 +561,16 @@ void FrameRate(room*& _room, int& _playerhp, int _listRoomLength)
 
 /*-----------------------------------------------------------------------------------------------------*/
 
-
-void Destroy(std::vector<room*>& _roomList)
+void Destroy(std::vector<room*>& _roomList, room* &_firstRoom, room* &_lastRoom)
 {
+	//int length = _roomList.size();
+
+	//for (size_t i = 0; i < length; i++)
+	//{
+	//	delete(_roomList[i]);
+	//}
+	//delete(_firstRoom);
+	//delete(_lastRoom);
 	_roomList.clear();
 }
 
@@ -611,6 +598,6 @@ int startGame()
 {
 	Init(roomList);
 	GameLoop();
-	Destroy(roomList);
+	Destroy(roomList, firstRoom, lastRoom);
 	return 0;
 }

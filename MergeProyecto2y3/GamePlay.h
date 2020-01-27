@@ -30,7 +30,7 @@ const short MAX__RAMIFICATIONS = 1;
 
 const short NUM_CONNECTIONS = 4;
 
-bool frameRateLoop = true;
+extern bool frameRateLoop;
 
 /*-------------------------------------------------------------------------------------*/
 
@@ -98,10 +98,12 @@ room* checkDoors(room* _room);
 void FrameRate(room*& _room, int& _playerhp, int _listRoomLength);
 
 
-void Destroy(std::vector<room*>& _roomList);
+void Destroy(std::vector<room*>& _roomList, room*& _firstRoom, room*& _lastRoom);
 
 void menuPause();
 
 void loadGameState();
 
 void saveGameState();
+
+extern std::vector<room*> roomList;

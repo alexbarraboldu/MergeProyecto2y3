@@ -224,7 +224,8 @@ void Play()
 		switch (R)
 		{
 		case 1:
-			std::cout << "OK BOOMER\n";
+			void loadGameState();
+			loadGameState();
 			break;
 		case 2:
 			playLoop = false;
