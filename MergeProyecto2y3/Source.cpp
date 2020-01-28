@@ -13,7 +13,7 @@ int countaUsers;
 std::vector<User> users;
 
 int main()
-{
+{ 
 	loadGame();
 	while (gameLoop == true)
 	{

@@ -38,7 +38,4 @@ void DeleteCharacterAdmin();
 
 void ListUsers();
 
-
-
-
 int startGame();

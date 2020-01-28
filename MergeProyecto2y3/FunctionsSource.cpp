@@ -81,6 +81,18 @@ void RegisterUser()
 	std::cin >> userName;
 	std::cout << "Introduce tu contraseña: ";
 	std::cin >> psswrd;
+	if (psswrd.size() > 8)
+	{
+		std::cout << "La contraseña que has introducido es muy larga, debe tener 8 caracteres como máximo.";
+		std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+		return;
+	}
+	for (size_t i = 0; i < users.size(); i++)
+	{
+		if (userName == users[i].name) { std::cout << "Ya hay un usuario con este nombre de usuario. Por favor introduce un nuevo nombre."; }
+		std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+		return;
+	}
 	User AuxUser(userName, psswrd);
 	users.push_back(AuxUser);
 	idUser = users.size()-1;

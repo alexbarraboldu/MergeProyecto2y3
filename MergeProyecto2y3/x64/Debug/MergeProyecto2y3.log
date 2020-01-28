@@ -1,0 +1,8 @@
+﻿  FunctionsSource.cpp
+c:\users\alex.barra\source\repos\mergeproyecto2y3-master\mergeproyecto2y3\functionssource.cpp(15): warning C4267: 'initializing': conversion from 'size_t' to 'short', possible loss of data
+c:\users\alex.barra\source\repos\mergeproyecto2y3-master\mergeproyecto2y3\functionssource.cpp(49): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\alex.barra\source\repos\mergeproyecto2y3-master\mergeproyecto2y3\functionssource.cpp(98): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\alex.barra\source\repos\mergeproyecto2y3-master\mergeproyecto2y3\functionssource.cpp(379): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\alex.barra\source\repos\mergeproyecto2y3-master\mergeproyecto2y3\functionssource.cpp(499): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\alex.barra\source\repos\mergeproyecto2y3-master\mergeproyecto2y3\functionssource.cpp(632): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  MergeProyecto2y3.vcxproj -> C:\Users\alex.barra\source\repos\MergeProyecto2y3-master\x64\Debug\MergeProyecto2y3.exe
