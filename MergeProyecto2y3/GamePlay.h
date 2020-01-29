@@ -107,3 +107,5 @@ void loadGameState();
 void saveGameState();
 
 extern std::vector<room*> roomList;
+
+extern std::vector<std::vector<room*>> VectorDungeon;

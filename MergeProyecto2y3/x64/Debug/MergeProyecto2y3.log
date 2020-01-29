@@ -1,8 +1,9 @@
 ﻿  FunctionsSource.cpp
-c:\users\alex.barra\source\repos\mergeproyecto2y3-master\mergeproyecto2y3\functionssource.cpp(15): warning C4267: 'initializing': conversion from 'size_t' to 'short', possible loss of data
-c:\users\alex.barra\source\repos\mergeproyecto2y3-master\mergeproyecto2y3\functionssource.cpp(49): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-c:\users\alex.barra\source\repos\mergeproyecto2y3-master\mergeproyecto2y3\functionssource.cpp(98): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-c:\users\alex.barra\source\repos\mergeproyecto2y3-master\mergeproyecto2y3\functionssource.cpp(379): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\alex.barra\source\repos\mergeproyecto2y3-master\mergeproyecto2y3\functionssource.cpp(499): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-c:\users\alex.barra\source\repos\mergeproyecto2y3-master\mergeproyecto2y3\functionssource.cpp(632): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  MergeProyecto2y3.vcxproj -> C:\Users\alex.barra\source\repos\MergeProyecto2y3-master\x64\Debug\MergeProyecto2y3.exe
+C:\Users\alexb\Desktop\Practica3-Programacion-master\MergeProyecto2y3\FunctionsSource.cpp(16,32): warning C4267: 'inicializando': conversión de 'size_t' a 'short'; posible pérdida de datos
+C:\Users\alexb\Desktop\Practica3-Programacion-master\MergeProyecto2y3\FunctionsSource.cpp(50,35): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\alexb\Desktop\Practica3-Programacion-master\MergeProyecto2y3\FunctionsSource.cpp(102,25): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\alexb\Desktop\Practica3-Programacion-master\MergeProyecto2y3\FunctionsSource.cpp(211,33): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\alexb\Desktop\Practica3-Programacion-master\MergeProyecto2y3\FunctionsSource.cpp(411,15): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\alexb\Desktop\Practica3-Programacion-master\MergeProyecto2y3\FunctionsSource.cpp(532,30): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\alexb\Desktop\Practica3-Programacion-master\MergeProyecto2y3\FunctionsSource.cpp(665,30): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+  MergeProyecto2y3.vcxproj -> C:\Users\alexb\Desktop\Practica3-Programacion-master\x64\Debug\MergeProyecto2y3.exe

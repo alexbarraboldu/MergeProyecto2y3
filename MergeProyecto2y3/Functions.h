@@ -22,6 +22,8 @@ void AdminMenu(int& _countaUsers);
 
 void Play();
 
+void listDungeons();
+
 void DeleteUserUser();
 
 void DeleteUserAdmin();
@@ -38,4 +40,6 @@ void DeleteCharacterAdmin();
 
 void ListUsers();
 
-int startGame();
+int startGameProcedural(int& _playerhp);
+
+int startGameFichero(int& _playerhp);

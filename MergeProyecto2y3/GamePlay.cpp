@@ -182,7 +182,7 @@ void drawMap(room*& _room)
 				//	PUERTA SUELO Y SUELO
 				std::cout << 'º';
 			}
-			else if ((i == roomSize - 1) && _room->west == NULL)
+			else if ((i == roomSize - 1) && _room->west == nullptr)
 			{
 				//	SUELO
 				std::cout << 'º';
@@ -379,6 +379,22 @@ void menuPause()
 			menuLoop = false;
 			return;
 		case 2:
+			int i;
+			bool checked;
+			for (i = 0; i < VectorDungeon.size(); i++)
+			{
+				if (roomList == VectorDungeon[i])
+				{ 
+					VectorDungeon[i] = roomList;
+					checked = false;
+					break;
+				}
+			}
+			if (checked) {
+				VectorDungeon.reserve(VectorDungeon.size() + 1);
+				VectorDungeon.insert(VectorDungeon.begin() + i, roomList);
+				VectorDungeon.shrink_to_fit();
+			}
 			saveGameState();
 			break;
 		case 3:
@@ -540,6 +556,14 @@ void FrameRate(room*& _room, int& _playerhp, int _listRoomLength)
 		std::cout << "\nPuerta WEST: " << _room->west << " | Puerta EAST: " << _room->east << "\nPuerta NORTH: " << _room->north << " | Puerta SOUTH: " << _room->south;
 		std::cout << "\nVidas: " << _playerhp << std::endl;
 
+		if (_playerhp <= 0)
+		{
+			system("cls");
+			std::cout << "HAS PERDIDO TODAS LAS VIDAS QUE TENIAS!\n";
+			system("pause");
+			return;
+		}
+
 		//if you really want FPS
 		if (timer >= 1000.0) { //every second
 			//std::cout << "Frames:" << frames << std::endl;
@@ -577,7 +601,7 @@ void Destroy(std::vector<room*>& _roomList, room* &_firstRoom, room* &_lastRoom)
 
 /*-----------------------------------------------------------------------------------------------------*/
 
-
+std::vector<std::vector<room*>> VectorDungeon;
 std::vector<room*> roomList;
 room* firstRoom = new room();
 room* lastRoom = new room();
@@ -588,16 +612,25 @@ void Init(std::vector<room*>& _RoomList)
 	InitRoomList(_RoomList, firstRoom, lastRoom, difficulty);
 }
 
-void GameLoop()
+void GameLoop(int& _playerhp)
 {
-	int playerhp = 100;
-	FrameRate(firstRoom, playerhp, roomList.size());
+	
+	FrameRate(firstRoom, _playerhp, roomList.size());
 }
 
-int startGame()
+int startGameProcedural(int& _playerhp)
 {
 	Init(roomList);
-	GameLoop();
+	GameLoop(_playerhp);
+	Destroy(roomList, firstRoom, lastRoom);
+	return 0;
+}
+
+int startGameFichero(int& _playerhp)
+{
+	firstRoom = roomList[0];
+	lastRoom = roomList[roomList.size()-1];
+	GameLoop(_playerhp);
 	Destroy(roomList, firstRoom, lastRoom);
 	return 0;
 }

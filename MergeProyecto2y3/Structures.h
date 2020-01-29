@@ -13,21 +13,24 @@ enum ItemIDs { VOID, SCHANPPS, PIKE, BOW, LONG_BOW, KNIFE, CLUB };
 struct Character {
 	std::string name;
 	Race race;
+	int playerhp;
 	int level;
 	std::array<AttackIDs, 4> attackVector;
 	ItemIDs item;
 
 	Character() {};
-	Character(std::string _name, Race _race, int _level)
+	Character(std::string _name, Race _race, int _playerhp,int _level)
 	{
 		name = _name;
 		race = _race;
+		playerhp = _playerhp;
 		level = _level;
 	};
-	Character(std::string _name, Race _race, int _level, std::array<AttackIDs, 4> _attackVector, ItemIDs _item)
+	Character(std::string _name, Race _race, int _playerhp,int _level, std::array<AttackIDs, 4> _attackVector, ItemIDs _item)
 	{
 		name = _name;
 		race = _race;
+		playerhp = _playerhp;
 		level = _level;
 		attackVector = _attackVector;
 		item = _item;

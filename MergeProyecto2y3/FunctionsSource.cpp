@@ -2,6 +2,7 @@
 #include <ctime>
 
 #include "Functions.h"
+#include "GamePlay.h"
 
 void saveGame();
 
@@ -89,9 +90,12 @@ void RegisterUser()
 	}
 	for (size_t i = 0; i < users.size(); i++)
 	{
-		if (userName == users[i].name) { std::cout << "Ya hay un usuario con este nombre de usuario. Por favor introduce un nuevo nombre."; }
-		std::this_thread::sleep_for(std::chrono::milliseconds(2000));
-		return;
+		if (userName == users[i].name)
+		{
+			std::cout << "Ya hay un usuario con este nombre de usuario. Por favor introduce un nuevo nombre.";
+			std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+			return;
+		}
 	}
 	User AuxUser(userName, psswrd);
 	users.push_back(AuxUser);
@@ -201,6 +205,31 @@ void AdminMenu(int& _countaUsers)
 	std::cin.ignore();
 }
 
+void listDungeons()
+{
+	short int dungeon;
+	int size = VectorDungeon.size();
+	bool errorLoop = true;
+
+	while (errorLoop)
+	{
+		std::cout << "Inserte el número de la Dungeon que quiera cargar: \n\n";
+		for (size_t i = 0; i < size; i++)
+		{
+			std::cout << i + 1 << ". Dungeon " << i + 1 << std::endl;
+		}
+		std::cin >> dungeon;
+
+		if (dungeon > size || dungeon < 1)	std::cout << "El número introducido no es válido.\n\n";
+		else 
+		{
+			errorLoop = false;
+			roomList = VectorDungeon[dungeon - 1];
+		}
+	}
+	return;
+}
+
 void Play()
 {
 	bool playLoop = true;
@@ -228,20 +257,23 @@ void Play()
 		std::this_thread::sleep_for(std::chrono::milliseconds(1500));
 
 		system("cls");
-
+		int R2;
 		std::cout << "1. Cargar dungeon.\n";
 		std::cout << "2. Generar proceduralmente.\n";
 		std::cout << "3. Salir.\n\n";
-		std::cin >> R;
-		switch (R)
+		std::cin >> R2;
+		switch (R2)
 		{
 		case 1:
 			void loadGameState();
 			loadGameState();
+			listDungeons();
+			playLoop = false;
+			startGameFichero(users[idUser].characters[R-1].playerhp);
 			break;
 		case 2:
 			playLoop = false;
-			startGame();
+			startGameProcedural(users[idUser].characters[R-1].playerhp);
 			break;
 		case 3:
 			return;
@@ -394,6 +426,7 @@ void NewCharacter()
 				while (CheckNameLoop == true)
 				{
 					character.name = nameR;
+					character.playerhp = 20;
 					character.level = 1;
 
 					users[idUser].characters[aCharCount] = character;
@@ -601,7 +634,7 @@ void DeleteCharacterUser()
 				std::cin >> RS;
 				if (RS == 's' || RS == 'S')
 				{
-					Character AuxChar;
+					Character AuxChar("",NONE,0,0);
 					for (size_t i = R - 1; i < aCharCount - 1; i++)
 					{
 						if (i + 1 == 5) continue;
