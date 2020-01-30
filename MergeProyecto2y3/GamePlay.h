@@ -106,6 +106,8 @@ void loadGameState();
 
 void saveGameState();
 
+void drawDungeon(std::vector<room*>& _roomList);
+
 extern std::vector<room*> roomList;
 
 extern std::vector<std::vector<room*>> VectorDungeon;

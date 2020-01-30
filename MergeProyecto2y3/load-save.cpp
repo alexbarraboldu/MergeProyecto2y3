@@ -550,3 +550,84 @@ void loadTextDungeon()
 	VectorDungeon.push_back(AuxVectorRoom);
 	file.close();
 }
+
+void saveTextDungeon()
+{
+	std::fstream file;
+	file.open("dungeon.txt", std::ios::out | std::ios::trunc);
+	if (!file.is_open())
+	{
+		std::cout << "ERROR: No se pudo abrir el archivo dungeon.txt\n No se pudo guardar la dungeon.\n";
+		return;
+	}
+	int length = roomList.size();
+	for (size_t i = 0; i < length; i++) //Por cada room
+	{
+		file << "player: pos: x: " << roomList[i]->player.pos.X << ", y: " << roomList[i]->player.pos.Y << " . skin: " << roomList[i]->player.skin << "; index: " << i << "; startenemynum: " << roomList[i]->enemyList.size() << "; doors: ";
+		int N = -1;
+		int S = -1;
+		int W = -1;
+		int E = -1;
+		if (roomList[i]->north != NULL)
+		{
+			for (size_t j = 0; j < length; j++)
+			{
+				if (roomList[i]->north = roomList[j])
+				{
+					N = j;
+				};
+			};
+		};
+		file << "N:";
+		if (N != -1)
+		{
+			file << N;
+		}
+		if (roomList[i]->south != NULL)
+		{
+			for (size_t j = 0; j < length; j++)
+			{
+				if (roomList[i]->south = roomList[j])
+				{
+					S = j;
+				};
+			}
+		}
+		file << ",S:";
+		if (S != -1)
+		{
+			file << S;
+		}
+		if (roomList[i]->west != NULL)
+		{
+			for (size_t j = 0; j < length; j++)
+			{
+				if (roomList[i]->west = roomList[j])
+				{
+					W = j;
+				};
+			}
+		}
+		file << ",W:";
+		if (W != -1)
+		{
+			file << W;
+		}
+		if (roomList[i]->east != NULL)
+		{
+			for (size_t j = 0; j < length; j++)
+			{
+				if (roomList[i]->east = roomList[j])
+				{
+					E = j;
+				};
+			}
+		}
+		file << ",E:";
+		if (E != -1)
+		{
+			file << E;
+		}
+		file << "; map: " << roomList[i]->size << ";\n";
+	}
+};

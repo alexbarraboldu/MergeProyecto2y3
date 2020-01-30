@@ -405,6 +405,103 @@ void menuPause()
 	}
 }
 
+void drawDungeon(std::vector<room*>& _roomList) {
+	size_t RoomListSize = _roomList.size();
+	for (size_t r = 0; r < RoomListSize; r++)
+	{
+		room* auxroom = _roomList[r];
+		size_t EnemyListSize = auxroom->enemyList.size();
+		std::vector<Enemy> auxEnemyList = auxroom->enemyList;
+		Enemy auxEnemy;
+		short int mapSize = auxroom->size;
+		std::cout << "\n";
+		for (size_t e = 0; e < auxroom->enemyList.size(); e++)
+		{
+			auxroom->map.at(auxroom->enemyList.at(e).pos.X).at(auxroom->enemyList.at(e).pos.Y) = auxroom->enemyList.at(e).skin;
+		}
+		for (size_t i = 0; i < mapSize; i++)
+		{
+			for (size_t j = 0; j < mapSize; j++)
+			{
+				if (i == 0 && j + 1 == mapSize)
+				{
+					//	ultima casilla del tejado
+					std::cout << "º\n";
+				}
+				//	TECHO
+				else if ((i == 0 && j != mapSize / 2) && auxroom->east != nullptr)
+				{
+					//	PUERTA TECHO Y TECHO
+					std::cout << 'º';
+				}
+				else if ((i == 0) && auxroom->east == nullptr)
+				{
+					//	TECHO
+					std::cout << 'º';
+				}
+				// SUELO
+				else if ((i == mapSize - 1 && j != mapSize / 2) && auxroom->west != nullptr)
+				{
+					//	PUERTA SUELO Y SUELO
+					std::cout << 'º';
+				}
+				else if ((i == mapSize - 1) && auxroom->west == NULL)
+				{
+					//	SUELO
+					std::cout << 'º';
+				}
+				//	IZQUIERDA
+				else if ((j == 0 && i != mapSize / 2) && auxroom->north != nullptr)
+				{
+					//	PARED Y PUERTA IZQUIERDA
+					std::cout << '|';
+				}
+				else if ((j == 0) && auxroom->north == nullptr)
+				{
+					//	PARED IZQUIERDA
+					std::cout << '|';
+				}
+				// DERECHA
+				else if ((j == mapSize - 1 && i != mapSize / 2) && auxroom->south != nullptr)
+				{
+					//	PARED Y PUERTA DERECHA
+					std::cout << "|";
+				}
+				else if ((j == mapSize - 1) && auxroom->south == nullptr)
+				{
+					//	PARED DERECHA
+					std::cout << "|";
+				}
+				else if (auxEnemy.pos.X != i && auxEnemy.pos.Y != j)
+				{
+					//	MAPA
+					std::cout << auxroom->map[i][j];
+				}
+
+			}
+			if (i == mapSize / 2)
+			{
+				//	PUERTA DERECHA
+				std::cout << ' ' << "\n";
+			}
+			else if (i != mapSize / 2 && i != 0)
+			{
+				if (i + 1 == mapSize)
+				{
+					std::cout << "\n";
+				}
+				else
+				{
+					//	PARED FALSA DERECHA
+					std::cout << " \n";
+				}
+				//	SIN PARED DERECHA
+				//std::cout << "\n";
+			}
+		}
+	}
+}
+
 bool frameRateLoop;
 
 void FrameRate(room*& _room, int& _playerhp, int _listRoomLength)
@@ -622,7 +719,31 @@ void GameLoop(int& _playerhp)
 int startGameProcedural(int& _playerhp)
 {
 	Init(roomList);
-	GameLoop(_playerhp);
+	bool menuloop = true;
+	while (menuloop)
+	{
+		int R;
+		system("cls");
+		drawDungeon(roomList);
+		std::cout << "1. Guardar.\n";
+		std::cout << "2. No guardar.\n\n";
+		std::cin >> R;
+		switch (R)
+		{
+		case 1:
+			void saveTextDungeon();
+			saveTextDungeon();
+			menuloop = false;
+			GameLoop(_playerhp);			
+			break;
+		case 2:
+			return 1;
+			break;
+		default:
+			break;
+		}
+		
+	}
 	Destroy(roomList, firstRoom, lastRoom);
 	return 0;
 }
@@ -630,7 +751,9 @@ int startGameProcedural(int& _playerhp)
 int startGameFichero(int& _playerhp)
 {
 	firstRoom = roomList[0];
-	lastRoom = roomList[roomList.size()-1];
+	lastRoom = roomList[roomList.size() - 1];
+	drawDungeon(roomList);
+	system("pause");
 	GameLoop(_playerhp);
 	Destroy(roomList, firstRoom, lastRoom);
 	return 0;
