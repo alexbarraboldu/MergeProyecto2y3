@@ -266,7 +266,9 @@ void Play()
 		{
 		case 1:
 			void loadGameState();
+			void loadTextDungeon();
 			loadGameState();
+			loadTextDungeon();
 			listDungeons();
 			playLoop = false;
 			startGameFichero(users[idUser].characters[R-1].playerhp);

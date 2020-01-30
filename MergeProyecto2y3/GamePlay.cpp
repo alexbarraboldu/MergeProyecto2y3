@@ -601,6 +601,7 @@ void Destroy(std::vector<room*>& _roomList, room* &_firstRoom, room* &_lastRoom)
 
 /*-----------------------------------------------------------------------------------------------------*/
 
+
 std::vector<std::vector<room*>> VectorDungeon;
 std::vector<room*> roomList;
 room* firstRoom = new room();

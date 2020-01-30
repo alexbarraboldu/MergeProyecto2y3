@@ -4,7 +4,6 @@
 #include <array>
 #include <vector>
 #include <string>
-#include <list>
 
 enum Race {	NONE,BARBAR,ASSASSIN,ARCHER,NIGROMANT,MAGICIAN };
 enum AttackIDs { NON, PUNCH, SWORD_THRUST, KNIFE_STAB, SHIELD };
