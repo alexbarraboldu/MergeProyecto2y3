@@ -2,6 +2,8 @@
 
 #include <fstream>
 #include <sstream>
+#include <regex>
+//#include <direct.h>
 
 #include "Structures.h"
 #include "Gameplay.h"
@@ -298,10 +300,10 @@ struct magString
 	std::string content;
 };
 
-void loadTextDungeon()
+void loadTextDungeon(std::string& _dungeonName)
 {
 	std::fstream file;
-	file.open("dungeon.txt", std::ios::in);
+	file.open(_dungeonName+".txt", std::ios::in);
 
 	std::vector<std::array<magString, 10>> VectorPAAMS;
 	std::vector<std::string> Estrings;
@@ -551,10 +553,10 @@ void loadTextDungeon()
 	file.close();
 }
 
-void saveTextDungeon()
+void saveTextDungeon(std::string& _dungeonName)
 {
 	std::fstream file;
-	file.open("dungeon.txt", std::ios::out | std::ios::trunc);
+	file.open(_dungeonName+".txt", std::ios::out | std::ios::trunc);
 	if (!file.is_open())
 	{
 		std::cout << "ERROR: No se pudo abrir el archivo dungeon.txt\n No se pudo guardar la dungeon.\n";

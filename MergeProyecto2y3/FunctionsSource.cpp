@@ -262,13 +262,16 @@ void Play()
 		std::cout << "2. Generar proceduralmente.\n";
 		std::cout << "3. Salir.\n\n";
 		std::cin >> R2;
+		std::string dungeonName;
 		switch (R2)
 		{
 		case 1:
 			void loadGameState();
-			void loadTextDungeon();
+			void loadTextDungeon(std::string & dungeonName);
 			loadGameState();
-			loadTextDungeon();
+			std::cout << "\nDeseas cargar antes alguna dungeon de texto?\n";
+			std::cin >> dungeonName;
+			loadTextDungeon(dungeonName);
 			listDungeons();
 			playLoop = false;
 			startGameFichero(users[idUser].characters[R-1].playerhp);

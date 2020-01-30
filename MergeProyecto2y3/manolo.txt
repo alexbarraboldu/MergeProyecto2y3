@@ -1,0 +1,5 @@
+player: pos: x: 11, y: 11 . skin: O; index: 0; startenemynum: 9; doors: N:4,S:,W:,E:; map: 22;
+player: pos: x: 11, y: 11 . skin: O; index: 1; startenemynum: 9; doors: N:4,S:4,W:,E:; map: 22;
+player: pos: x: 11, y: 11 . skin: O; index: 2; startenemynum: 9; doors: N:4,S:4,W:,E:; map: 22;
+player: pos: x: 11, y: 11 . skin: O; index: 3; startenemynum: 9; doors: N:4,S:4,W:,E:; map: 22;
+player: pos: x: 11, y: 11 . skin: O; index: 4; startenemynum: 9; doors: N:,S:4,W:,E:; map: 22;

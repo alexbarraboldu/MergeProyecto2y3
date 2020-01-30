@@ -728,11 +728,14 @@ int startGameProcedural(int& _playerhp)
 		std::cout << "1. Guardar.\n";
 		std::cout << "2. No guardar.\n\n";
 		std::cin >> R;
+		std::string dungeonName;
 		switch (R)
 		{
 		case 1:
-			void saveTextDungeon();
-			saveTextDungeon();
+			void saveTextDungeon(std::string& _dungeonName);
+			std::cout << "\nIntroduce un nombre para el archivo:\n";
+			std::cin >> dungeonName;
+			saveTextDungeon(dungeonName);
 			menuloop = false;
 			GameLoop(_playerhp);			
 			break;

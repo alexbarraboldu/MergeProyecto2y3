@@ -1,14 +1,9 @@
-﻿  GamePlay.cpp
-C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\GamePlay.cpp(45,37): warning C4267: 'argumento': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\GamePlay.cpp(83,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\GamePlay.cpp(146,40): warning C4267: 'inicializando': conversión de 'size_t' a 'short'; posible pérdida de datos
-C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\GamePlay.cpp(639,97): warning C4244: '=': conversión de '_Rep' a 'clock_t'; posible pérdida de datos
-          with
-          [
-              _Rep=__int64
-          ]
-C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\GamePlay.cpp(667,12): warning C4244: '=': conversión de 'float' a 'clock_t'; posible pérdida de datos
-C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\GamePlay.cpp(675,27): warning C4244: '+=': conversión de 'float' a 'clock_t'; posible pérdida de datos
-C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\GamePlay.cpp(677,12): warning C4244: '=': conversión de 'float' a 'clock_t'; posible pérdida de datos
-C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\GamePlay.cpp(716,49): warning C4267: 'argumento': conversión de 'size_t' a 'int'; posible pérdida de datos
+﻿  FunctionsSource.cpp
+C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\FunctionsSource.cpp(16,32): warning C4267: 'inicializando': conversión de 'size_t' a 'short'; posible pérdida de datos
+C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\FunctionsSource.cpp(50,35): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\FunctionsSource.cpp(102,25): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\FunctionsSource.cpp(211,33): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\FunctionsSource.cpp(418,15): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\FunctionsSource.cpp(539,30): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\alexb\source\repos\MergeProyecto2y3-master\MergeProyecto2y3\FunctionsSource.cpp(672,30): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
   MergeProyecto2y3.vcxproj -> C:\Users\alexb\source\repos\MergeProyecto2y3-master\x64\Debug\MergeProyecto2y3.exe
